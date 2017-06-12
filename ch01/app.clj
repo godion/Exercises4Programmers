@@ -12,8 +12,12 @@
         (println prompt)
         (recur (read-string (read-line)))))))
 
-(let [total (get-input "Total: " number?)
-      other (get-input "Ohter: " number?)]
+(defn get-total [] (get-input "Total: " number?))
+
+(defn get-other [] (get-input "Other: " number?))
+
+(let [total (get-total)
+      other (get-other)]
   (println "total + other: " (+ total other)))
 
 ;(when-not (= "Q" (get-input "A"))
